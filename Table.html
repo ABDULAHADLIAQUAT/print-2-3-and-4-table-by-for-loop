@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiplication Tables (3, 4, 5)</h1>
+    <div class="table-container" id="tables"></div>
+    <script>
+         function generateTables() {
+            let container = document.getElementById("tables");
+            for (let num = 3; num <= 5; num++) {
+                let tableHTML = `<div class="table"><h2>Table of ${num}</h2>`;
+                for (let i = 1; i <= 10; i++) {
+                    tableHTML += `<p>${num} x ${i} = ${num * i}</p>`;
+                }
+                tableHTML += `</div>`;
+                container.innerHTML += tableHTML;
+            }
+        }
+        generateTables();
+    </script>
+</body>
+</html>
